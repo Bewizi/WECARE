@@ -5,7 +5,7 @@ import { Icon } from '@iconify/vue'
 
 <template>
   <AppContainer>
-    <section class="flex justify-between items-center lg:mt-8 flex-col-reverse lg:flex-row">
+    <section class="flex justify-between items-center lmt-8 flex-col-reverse lg:flex-row">
       <div class="lg:max-w-2xl">
         <h1
           class="mb-5 text-7xl font-extrabold font-kanit italic text-[#A3F90C] [text-shadow:_0_4px_4px_rgb(0_0_0_/_0.9)] hidden lg:block"
@@ -73,13 +73,13 @@ import { Icon } from '@iconify/vue'
 
         <!-- cloud 1 -->
         <div class="absolute top-12 right-7">
-          <img src="/public/images/Cloud.png" alt="Cloud" class="w-[100px]" />
+          <img src="/images/Cloud.png" alt="Cloud" class="w-[100px]" />
         </div>
         <!-- cloud -->
 
         <!-- cloud 2 -->
         <div class="absolute top-64 right-5 -z-10">
-          <img src="/public/images/Cloud.png" alt="Cloud" class="w-[200px]" />
+          <img src="/images/Cloud.png" alt="Cloud" class="w-[200px]" />
         </div>
         <!-- cloud -->
       </div>

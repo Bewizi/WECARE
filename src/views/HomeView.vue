@@ -1,6 +1,11 @@
 <script setup lang="ts">
 import AppContainer from '@/components/AppContainer.vue'
 import { Icon } from '@iconify/vue'
+import { useClipboard } from '@vueuse/core'
+import { shallowRef } from 'vue'
+
+const input = shallowRef('')
+const { text, isSupported, copy } = useClipboard()
 </script>
 
 <template>
@@ -25,15 +30,22 @@ import { Icon } from '@iconify/vue'
         </div>
 
         <!-- input -->
+        <div>
+          <p>Current copied:{{ text || 'none' }}</p>
+        </div>
         <div
+          v-if="isSupported"
           class="hidden lg:flex items-center gap-8 bg-white shadow-md shadow-black rounded-lg px-5 py-2 w-[500px] mb-5"
         >
           <input
+            v-model="input"
+            type="text"
             class="px-2 py-2 text-lg font-kanit w-full outline-none text-black placeholder:text-black"
             placeholder="4S94Bfigd8f235dHkI04JfkXs51tPump"
           />
           <div
-            class="bg-[#A1FB05] px-4 py-2 rounded-xl border-2 border-black shadow-[-1px_1.56px_1px_1px_rgba(0,0,0,0.9)] shadow-black"
+            class="bg-[#A1FB05] px-4 py-2 rounded-xl border-2 border-black shadow-[-1px_1.56px_1px_1px_rgba(0,0,0,0.9)] shadow-black cursor-pointer"
+            @click="copy(input)"
           >
             <button class="font-kanit text-xl">Copy</button>
           </div>

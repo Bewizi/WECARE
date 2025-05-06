@@ -15,10 +15,10 @@ import AppLink from './AppLink.vue'
         <nav>
           <ul class="flex justify-between items-center space-x-60">
             <li>
-              <AppLink to="/" class="font-kanit text-xl">Whitepaper</AppLink>
+              <AppLink to="/whitepaper" class="font-kanit text-xl">Whitepaper</AppLink>
             </li>
             <li>
-              <AppLink to="/" class="font-kanit text-xl">Telegram</AppLink>
+              <AppLink to="/telegram" class="font-kanit text-xl">Telegram</AppLink>
             </li>
           </ul>
         </nav>
